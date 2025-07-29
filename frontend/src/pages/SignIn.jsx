@@ -32,7 +32,7 @@ const SignIn = () => {
         name='email'
         type='email'
         placeholder='Enter Your Email'
-        className='mb-6'
+        loginClassName= 'mb-6 bg-gray-50'
         value={data.email}
         onChange={handleInputChange}
       />
@@ -41,7 +41,7 @@ const SignIn = () => {
         name='password'
         type='password'
         placeholder='Enter Your Password'
-        className='mb-14'
+        loginClassName= 'mb-6 bg-gray-50'
         value={data.password}
         onChange={handleInputChange}
       />

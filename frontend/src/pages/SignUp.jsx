@@ -34,7 +34,7 @@ const SignUp = () => {
         name='name'
         type='text'
         placeholder='Enter Your Name'
-        className='mb-6'
+        loginClassName='mb-6 bg-gray-50'
         value={data.name}
         onChange={handleInputChange}
       />
@@ -43,7 +43,7 @@ const SignUp = () => {
         name='email'
         type='email'
         placeholder='Enter Your Email'
-        className='mb-6'
+        loginClassName='mb-6 bg-gray-50'
         value={data.email}
         onChange={handleInputChange}
       />
@@ -52,7 +52,7 @@ const SignUp = () => {
         name='password'
         type='password'
         placeholder='Enter Your Password'
-        className='mb-14'
+        loginClassName= 'mb-6 bg-gray-50'
         value={data.password}
         onChange={handleInputChange}
       />

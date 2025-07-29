@@ -45,7 +45,7 @@ const Dashboard = () => {
               {
                 contacts.map(({name,status,img})=>{
                   return (
-                    <div className='flex items-center py-8 border-b border-b-gray-300 cursor-pointer'>
+                    <div key={name} className='flex items-center py-8 border-b border-b-gray-300 cursor-pointer'>
             
                       <img src={img} alt="profile icon" className='w-[40px] h-[40px] border border-r-blue-400 rounded-full p-[2px]' />
                       
@@ -97,10 +97,10 @@ const Dashboard = () => {
                 </div>
               </div>  
             </div>
-            <div className='p-4 w-full flex items-center'>
-              <Input placeholder='Type a message....' className='w-[75%] p-2 px-4 border-0 shadow-md rounded-full bg-light focus:ring-0 focus:border-0 outline-none'/>
-              <div className='ml-4 p-4 cursor-pointer bg-light rounded-full'>
-                <Send className='h-[20px]'/>
+            <div className='p-4 w-full flex items-center '>
+              <Input placeholder='Type a message....' className='w-[75%] p-2 px-4 border-0 shadow-md rounded-full bg-white focus:ring-0 focus:border-0 outline-none'/>
+              <div className='ml-3  p-4 cursor-pointer bg-light rounded-full'>
+                <Send className='h-[20px] mt-2'/>
               </div>
             </div>
       </div>

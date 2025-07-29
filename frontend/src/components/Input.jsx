@@ -5,13 +5,14 @@ const Input = ({
   name = '',
   type = 'text',
   className = '',
+  loginClassName = '',
   isRequired = false,
   placeholder = '',
   value = '',
   onChange = ()=>{}
 }) => {
   return (
-    <div>
+    <div className={`${className}`}>
     <label className="block mb-2 text-sm font-medium text-gray-900" >
       {label}
     </label>
@@ -19,7 +20,7 @@ const Input = ({
         type={type}
         id={name}
         name={name}
-        className={`mt-1 bg-gray-50 border border-gray-300 text-gray-600 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ${className}`}
+        className={`mt-1 border border-gray-50 text-gray-600 text-sm rounded-lg  block w-full p-2.5  ${loginClassName}`}
         placeholder={placeholder}
         required={isRequired}
         value={value}
