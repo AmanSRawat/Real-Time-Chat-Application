@@ -12,6 +12,6 @@ const messageSchema = new mongoose.Schema({
     }
 })
 
-const Messages = mongoose.model('User',messageSchema)
+const Messages = mongoose.model('Message',messageSchema)
 
 export default Messages

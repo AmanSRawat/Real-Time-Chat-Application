@@ -1,6 +1,7 @@
 import Users from '../models/User.js'
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcryptjs'
+import { application } from 'express'
 
 export async function register  (req,res){
     try {
@@ -52,6 +53,19 @@ export async function signin(req,res){
         const token = jwt.sign({email:user.email},'secret',{expiresIn: 84600})
         return res.status(200).json({token})
 
+    } catch (error) {
+        console.log(error)
+        return res.status(400).json({message: error.message})
+    }
+}
+
+export async function getAllUsers(req,res){
+    try {
+        const users = await Users.find()
+        const userData = await Promise.all(users.map(async (user)=>{
+            return {user: {email:user.email,username: user.username}, userId: user._id}
+        }))
+        res.status(200).json(userData)
     } catch (error) {
         console.log(error)
         return res.status(400).json({message: error.message})
